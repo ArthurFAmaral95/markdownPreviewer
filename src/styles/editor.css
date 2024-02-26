@@ -1,0 +1,10 @@
+#editor {
+  width: 100%;
+  height: 30rem;
+}
+
+#editor:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=editor.css.map */

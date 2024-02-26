@@ -1,0 +1,24 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 2px solid black;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: rgb(70, 130, 180);
+  font-size: 2rem;
+}
+header .flex-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+header span {
+  font-weight: bold;
+}
+header .flex-right i {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,12 @@
+#preview {
+  font-size: 1.6rem;
+}
+#preview img {
+  max-width: 100%;
+}
+#preview pre,
+#preview code {
+  background-color: white;
+}
+
+/*# sourceMappingURL=previewer.css.map */

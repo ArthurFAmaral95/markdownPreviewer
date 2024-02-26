@@ -1,0 +1,75 @@
+@use "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+#markdown-editor {
+  background-color: variables.$app-background-color;
+  height: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#markdown-editor.full-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container,
+.previewer-container {
+  height: fit-content;
+  border-radius: variables.$border-radius;
+  border: 1px solid black;
+  box-shadow: 0 0 1rem 0.3rem black;
+}
+
+.editor-container.hidden,
+.previewer-container.hidden {
+  display: none;
+}
+
+.editor-container.full,
+.previewer-container.full,
+.editor-container.full #editor,
+.previewer-container.full #preview {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  overflow: scroll;
+}
+
+#editor,
+#preview {
+  background-color: variables.$box-color;
+  padding: 1rem 0.3rem;
+  border-bottom-left-radius: variables.$border-radius;
+  border-bottom-right-radius: variables.$border-radius;
+}
+
+@media (max-width: 1024px) {
+  #markdown-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .editor-container {
+    width: 70%;
+  }
+
+  .previewer-container {
+    width: 80%;
+  }
+}

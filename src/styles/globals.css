@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+#markdown-editor {
+  background-color: rgb(0, 0, 128);
+  height: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+#markdown-editor.full-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container,
+.previewer-container {
+  height: fit-content;
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  box-shadow: 0 0 1rem 0.3rem black;
+}
+
+.editor-container.hidden,
+.previewer-container.hidden {
+  display: none;
+}
+
+.editor-container.full,
+.previewer-container.full,
+.editor-container.full #editor,
+.previewer-container.full #preview {
+  width: 100%;
+  height: calc(100vh - 5rem);
+  overflow: scroll;
+}
+
+#editor,
+#preview {
+  background-color: rgb(173, 216, 230);
+  padding: 1rem 0.3rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  #markdown-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .editor-container {
+    width: 70%;
+  }
+  .previewer-container {
+    width: 80%;
+  }
+}
+
+/*# sourceMappingURL=globals.css.map */
